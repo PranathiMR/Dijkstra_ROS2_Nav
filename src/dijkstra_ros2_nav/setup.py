@@ -24,6 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'planner = dijkstra_ros2_nav.planner_node:main',
+            'graph_planner = dijkstra_ros2_nav.graph_planner_node:main', # <-- ADD THIS LINE
         ],
     },
 )
