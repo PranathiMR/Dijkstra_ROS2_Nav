@@ -34,7 +34,7 @@ class TopologicalPlannerNode(Node):
 
         # 3. Subscriptions and Publishers
         # Listen for the user clicking "2D Nav Goal" in RViz
-        self.goal_sub = self.create_subscription(PoseStamped, '/goal_pose', self.goal_callback, 10)
+        self.goal_sub = self.create_subscription(PoseStamped, '/move_base_simple/goal', self.goal_callback, 10)
         
         # Broadcast the calculated physical path to the robot's local controllers
         self.path_pub = self.create_publisher(Path, '/topological_path', 10)
