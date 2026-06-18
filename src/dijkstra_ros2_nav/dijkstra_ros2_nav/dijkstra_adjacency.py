@@ -3,11 +3,8 @@ import heapq
 def calculate_dijkstra_graph(graph, start, goal):
     """
     Calculates the shortest path on a node-based graph (Adjacency List).
-    graph: Dictionary where keys are nodes and values are dicts of neighbors {node: cost}.
-    start: The starting node (e.g., 'A')
-    goal: The destination node (e.g., 'F')
     """
-    # Priority Queue: stores tuples of (total_cost, current_node, path_so_far)
+    # Priority Queue: stores tuples of total_cost, current_node, path_so_far
     queue = [(0, start, [start])]
     visited = set()
 
